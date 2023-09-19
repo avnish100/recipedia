@@ -5,7 +5,7 @@ async function fetchRecipeInfo(name) {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '82b9499e05msh0985a72e506510dp1e67a6jsn09231656bed4',
+            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
             'X-RapidAPI-Host': 'bbc-good-food-api.p.rapidapi.com'
         }
     };

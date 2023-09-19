@@ -6,9 +6,10 @@ const Search = ({getSearchResults}) =>{
     const [query,setQuery] = useState('');
     const handleSubmit = async(e) =>{
         e.preventDefault();
+        const apikey = process.env.RAPID_API_KEY
         const options = {method: 'GET',
         headers: {
-          'X-RapidAPI-Key': '82b9499e05msh0985a72e506510dp1e67a6jsn09231656bed4',
+          'X-RapidAPI-Key': apikey,
           'X-RapidAPI-Host': 'bbc-good-food-api.p.rapidapi.com'
         }}
         const res = await fetch(`https://bbc-good-food-api.p.rapidapi.com/search?query=${query}`,options);
